@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Define hostname
+HN=frontend.amaldeep.tech
+
 yum update -y
-hostnamectl set-hostname frontend.amaldeep.tech
+hostnamectl set-hostname $HN
 yum install git httpd -y 
 amazon-linux-extras install php7.4  -y 
 systemctl enable httpd.service
